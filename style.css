@@ -45,14 +45,26 @@ body {
     letter-spacing: 1px;
 }
 
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin: 0 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+.nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Keeps it completely hidden off-screen to the right */
+        width: 70%;
+        height: 100vh;
+        background-color: #13181C; /* Solid deep background matching your cards */
+        gap: 3rem;
+        transition: right 0.4s ease-in-out; /* Handles the sliding motion */
+        z-index: 100; /* Keeps it under the hamburger icon but above the page content */
+    }
+
+    /* This class triggers when JavaScript adds the active state */
+    .nav-links.active {
+        right: 0 !important; /* Forces the panel to slide into full view from the right side */
+    }
 
 .nav-links a:hover {
     color: var(--text-main);
