@@ -824,25 +824,4 @@ body {
         height: 1px;
     }
 }
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide standard nav items for mobile optimization later */
-    }
-}
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 1.5rem 5%;
-    }
-    .nav-links {
-        display: none; /* Hide standard nav items for mobile optimization later */
-    }
-    .hero-actions {
-        width: 100%;
-        flex-direction: column;
-    }
-    .btn-primary, .btn-secondary {
-        text-align: center;
-        width: 100%;
-    }
-}
+
