@@ -743,12 +743,21 @@ body {
         right: 0; /* Slides the navigation panel fully into view */
     }
 
-    .nav-links a {
+.nav-links a {
         font-family: var(--font-heading);
         font-size: 1.8rem;
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 1px;
+        color: var(--text-main); /* Forces the links to be clean white */
+        text-decoration: none;    /* Removes the default underline completely */
+        transition: color 0.2s ease;
+    }
+
+    /* Gives the mobile links your signature neon-green pop when tapped */
+    .nav-links a:hover,
+    .nav-links a:active {
+        color: var(--accent-color);
     }
 
     /* Interactive Morphing Animation: Converts the Hamburger '=' into an 'X' */
