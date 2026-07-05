@@ -737,7 +737,11 @@ body {
         height: 1px;
     }
 }
-
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide standard nav items for mobile optimization later */
+    }
+}
 /* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .navbar {
