@@ -60,3 +60,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             }, 4000);
         });
 });
+// Smooth Scroll-Reveal Animation Engine
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target); // Keeps elements visible once animated
+            }
+        });
+    }, {
+        threshold: 0.15, // Triggers when 15% of the card is visible
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach((el) => observer.observe(el));
+});
