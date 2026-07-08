@@ -29,7 +29,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     submitBtn.style.opacity = "0.7";
 
     // sendForm arguments: ('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    emailjs.sendForm('service_2qoxjjv', 'template_49148ys', this)
         .then(function() {
             // Success! Show your custom premium notification
             submitBtn.innerText = "MESSAGE SENT! 🔥";
