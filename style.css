@@ -43,7 +43,9 @@ body {
     backdrop-filter: blur(12px); /* Blurs the content moving behind it */
     -webkit-backdrop-filter: blur(12px); /* Safari support */
     
-    /* Sleek bottom border to split it
+    /* Sleek bottom border to split it from the page content cleanly */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+}
 
 .navbar .logo {
     font-family: var(--font-heading);
