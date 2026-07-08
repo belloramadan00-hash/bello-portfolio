@@ -26,6 +26,7 @@ body {
 }
 
 /* --- NAVBAR STYLING --- */
+/* --- NAVBAR STYLING --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,26 +46,20 @@ body {
     letter-spacing: 1px;
 }
 
+/* Updated for normal desktop positioning */
 .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: -100%; /* Keeps it completely hidden off-screen to the right */
-        width: 70%;
-        height: 100vh;
-        background-color: #13181C; /* Solid deep background matching your cards */
-        gap: 3rem;
-        transition: right 0.4s ease-in-out; /* Handles the sliding motion */
-        z-index: 100; /* Keeps it under the hamburger icon but above the page content */
-    }
+    display: flex;
+    flex-direction: row; /* Horizontal links on desktop */
+    gap: 3rem;
+}
 
-    /* This class triggers when JavaScript adds the active state */
-    .nav-links.active {
-        right: 0 !important; /* Forces the panel to slide into full view from the right side */
-    }
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
 
 .nav-links a:hover {
     color: var(--text-main);
@@ -86,7 +81,6 @@ body {
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
-
 /* --- HERO SECTION STYLING --- */
 .hero {
     min-height: 100vh;
